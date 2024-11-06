@@ -1,4 +1,4 @@
-import {useState, useEffect, useMemo, useRef} from 'react';
+import {useState, useEffect, useMemo, useRef, useCallback } from 'react';
 
 const BarreFiltre = ({database, filterData, resetFilters}) => {
   const [databaseValues, setDatabaseValues] = useState({});
@@ -63,7 +63,7 @@ const BarreFiltre = ({database, filterData, resetFilters}) => {
   }, [resetFilters]);
 
   // Mise à zéro des sélecteurs
-  const handleResetSelectFilters = () => {
+  const handleResetSelectFilters = useCallback(() => {
     resetFilters();
 
     Object.values(refSelect.current).forEach((select) => {
@@ -71,7 +71,7 @@ const BarreFiltre = ({database, filterData, resetFilters}) => {
         select.value = "";
       }
     })
-  }
+  },[resetFilters]);
 
   return (
     <div >

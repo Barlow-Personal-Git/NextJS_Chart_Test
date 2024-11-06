@@ -1,7 +1,17 @@
 import { useRef, useEffect, useState } from 'react';
 
 import { Bar } from "react-chartjs-2";
-import Chart from 'chart.js/auto';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+
+// Pour éviter l'erreur "category"
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const Graphiques = ({datas,type}) => {
 
