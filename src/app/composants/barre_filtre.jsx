@@ -79,7 +79,7 @@ const BarreFiltre = ({database, filterData, resetFilters}) => {
       <hr className="w-full border-amber-300 my-2" />
       {dataKeys.map((key, index) => (
         <div key={index} className='py-3'>
-          <h2 className="capitalize">{key}</h2>
+          <h2 className="capitalize">{(key === "age" ? "âge": key)}</h2>
           {key === 'prix' ? (
             <div>
               <label>
@@ -107,7 +107,7 @@ const BarreFiltre = ({database, filterData, resetFilters}) => {
             </div>
           ) : ( 
             <select ref={el => refSelect.current[key] = el} className="border border-gray-400 rounded-md focus:ring focus:border-amber-300" onChange={(event) => changementDonnee(key,event)}>
-              <option value="">--- Filtrer par {key} ---</option>
+              <option value="">--- Filtrer par {(key === "age" ? "âge": key)} ---</option>
               {
                 databaseValues[key]?.map((dbValue, dbKey) => (
                   <option key={dbKey} value={dbValue}>{dbValue}</option>

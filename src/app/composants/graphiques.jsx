@@ -74,7 +74,7 @@ const Graphiques = ({datas,type}) => {
 
   return (
     <div>
-      <h1 className='text-2xl flex justify-center'> Répartition par {type}</h1>
+      <h1 className='text-2xl flex justify-center'> Répartition par {(type === "age" ? "âge": type)}</h1>
       <hr className="w-full border-amber-300 my-2" />
       <Bar 
        ref={refChart}
