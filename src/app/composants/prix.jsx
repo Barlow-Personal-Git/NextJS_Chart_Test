@@ -18,7 +18,7 @@ const Prix = ({datas}) => {
 
     return (
     <div>
-        <h1>Prix moyenne</h1>
+        <h1>Prix moyen</h1>
         <hr className="w-full border-amber-300 my-2" />
         <div>{moyenne}$</div>
     </div>

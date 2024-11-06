@@ -45,13 +45,19 @@ const Composants = () => {
 
     // Mettre à jour les données filtrées
     setDatas(newData);
+  };
+
+  // Remise à zéro des filtres et réinitialisation des données avec la base d'origine
+  const resetFilters = () => {
+    setFilters({});
+    setDatas(database);
   }
   
   return (
     <div className='flex justify-between px-2 py-4'>
       <div className="h-full border-4 border-t-green-500">
         <div className='max-w-sm rounded overflow-hidden px-4 py-4 shadow-sm rounded w-72'>
-          <BarreFiltre database={database} filterData={filterData}/>
+          <BarreFiltre database={database} filterData={filterData} resetFilters={resetFilters}/>
         </div>
       </div>
 
