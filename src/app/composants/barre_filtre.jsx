@@ -119,7 +119,7 @@ const BarreFiltre = ({database, filterData, resetFilters}) => {
         </div>
       ))}
       <div className='py-4 text-left'>
-        <button className="border-black border-2 rounded-lg px-2" ref={refButtonReset}>Reset</button>
+        <button className="border-black border-2 rounded-lg px-2" ref={refButtonReset}>Remise à zéro</button>
       </div>
     </div>
     
