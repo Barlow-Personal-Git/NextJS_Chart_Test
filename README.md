@@ -1,11 +1,32 @@
 # NextJS_Chart_Test
  
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Ceci est fait avec [Next.js](https://nextjs.org).
 
-## Getting Started
+## Commencer
 
-First, run the development server:
+Tout d'abord, vous devez installer les dépendances en utilisant l'une des commandes suivantes :
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
+Ensuite, construisez le projet en utilisant :
+```bash
+npm run build
+# or
+yarn run build
+# or
+pnpm run build
+# or
+bun run build
+```
+
+Finalement, démarrez le serveur de développement :
 ```bash
 npm run dev
 # or
@@ -16,23 +37,22 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Déploiement sur Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ce projet est déployé sur Vercel 
+Le lien est le suivant : [https://next-js-chart-test.vercel.app/](https://next-js-chart-test.vercel.app/)
 
-## Learn More
+## Codes
 
-To learn more about Next.js, take a look at the following resources:
+Le fichier principal est `page.tsx` dans le dossier `src\app`.
+Les composants se trouvent dans `src\app\composants`
+`composants.jsx` est le composant parent des 3 autres composants :  `barre_filtre.jsx`, `graphiques.jsx` et `prix.jsx`;
+J'ai ajouté des commentaires pour simplifier la compréhension de mes fichiers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Fonctionnalités
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Les données peuvent être filtrées.
+- Les barres dans les graphiques peuvent être cliquées pour effectuer un zoom avant et cliquer à nouveau permet de revenir en arrière.
+- Le prix moyen change en fonction des données disponibles selon le filtrage.
